@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Converso de Dinheiro</string>
+
+    <string name="slide_1_title">Orientações</string>
+    <string name="slide_1_description">
+
+     Digite o valor e o tipo da moeda que deseja converte
+      \n
+      Não esqueça de salva suas cotações!
+</string>
+    <string name="slide_1_button_label">Vamos iniciar</string>
+    <string name="slide_1_button_message">
+    Tenha um bom dia
+</string>
+    <string name="Historico_de_Consultas">Historico de Consultas</string>
+</resources>
