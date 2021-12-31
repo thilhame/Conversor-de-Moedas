@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray">
+    android:background="#5109F3">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/Historico_de_Consultas"
-        android:background="@android:color/holo_blue_dark"/>
+        android:background="@color/teal_700"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_history"
