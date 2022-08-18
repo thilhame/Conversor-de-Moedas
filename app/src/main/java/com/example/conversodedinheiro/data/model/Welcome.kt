@@ -2,6 +2,7 @@ package com.example.conversodedinheiro.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.*
 
 
 typealias Welcome = HashMap<String, WelcomeValue>

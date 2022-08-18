@@ -1,4 +1,5 @@
-package com.example.conversodedinheiro.ui.main
+package com.example.conversodedinheiro.main
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+   override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
@@ -69,12 +70,15 @@ class MainActivity : AppCompatActivity() {
 
             val search = "${binding.tilFrom.text}-${binding.tilTo.text}"
             viewModel.getExchangeValue(search)
+
+
         }
 
         binding.btnSave.setOnClickListener {
             val value = viewModel.state.value
             (value as? MainViewModel.State.Sucess)?.let {
-                val exchange = it.exchange.copy(bid = it.exchange.bid * binding.tilValue.text.toDouble())
+                val exchange =
+                    it.exchange.copy(bid = it.exchange.bid * binding.tilValue.text.toDouble())
                 viewModel.saveExchange(it.exchange)
             }
 
@@ -88,11 +92,11 @@ class MainActivity : AppCompatActivity() {
                 is MainViewModel.State.Error -> {
                     dialog.dismiss()
                     createDialog {
-                        setMessage(it.throwable.message)
+                        setMessage("Escolha uma moeda diferente para a conversão")
                     }.show()
                 }
 
-                is MainViewModel.State.Sucess  -> success(it)
+                is MainViewModel.State.Sucess -> success(it)
                 MainViewModel.State.Saved -> {
                     dialog.dismiss()
                     createDialog {

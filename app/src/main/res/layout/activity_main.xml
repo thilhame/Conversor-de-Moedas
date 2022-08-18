@@ -6,8 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F6B6E65"
-    tools:context=".ui.main.MainActivity">
+    android:background="@color/teal_200"
+    tools:context=".main.MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:title= " Converso de Moedas"
-        app:titleMargin="@dimen/layout_extra_padding"
+        android:backgroundTint="#55337E"
         />
 
     <androidx.constraintlayout.widget.Guideline
@@ -38,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_padding"
-        android:hint="Valor"
+        android:hint="@string/valor"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
@@ -58,11 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_padding"
         android:layout_marginEnd="@dimen/layout_half_padding"
-        android:hint="Converter de:"
+        android:hint="@string/converter_de"
         app:layout_constraintEnd_toStartOf="@id/til_to"
         app:layout_constraintStart_toStartOf="@id/guide_start"
-        app:layout_constraintTop_toBottomOf="@id/til_value"
-        android:layout_marginRight="@dimen/layout_half_padding">
+        app:layout_constraintTop_toBottomOf="@id/til_value">
 
         <androidx.appcompat.widget.AppCompatAutoCompleteTextView
             android:id="@+id/tv_from"
@@ -79,11 +78,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_half_padding"
-        android:hint="Para:"
+        android:hint="@string/para"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintStart_toEndOf="@id/til_from"
-        app:layout_constraintTop_toTopOf="@id/til_from"
-        android:layout_marginLeft="@dimen/layout_half_padding">
+        app:layout_constraintTop_toTopOf="@id/til_from">
 
         <androidx.appcompat.widget.AppCompatAutoCompleteTextView
             android:id="@+id/tv_to"
@@ -100,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_padding"
         android:enabled="false"
-        android:text="Converter"
+        android:text="@string/converter"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toBottomOf="@id/til_from" />
@@ -110,7 +108,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="Salvar"
+        android:text="@string/salvar"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toBottomOf="@id/btn_converter" />

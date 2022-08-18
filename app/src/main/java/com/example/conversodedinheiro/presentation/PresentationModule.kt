@@ -1,6 +1,7 @@
 package com.example.conversodedinheiro.presentation
 
-import get
+import com.example.conversodedinheiro.presentation.HistoryViewModel
+import com.example.conversodedinheiro.presentation.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.core.module.Module

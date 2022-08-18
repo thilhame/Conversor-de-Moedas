@@ -24,6 +24,7 @@ class CoinRepositoryImpl(
             emit(exchanger)
         }catch (e:HttpException){
             val json = e.response()?.errorBody()?.string()
+            //
             val errorResponse = Gson().fromJson(json,ErrorResponse::class.java)
             throw RemoteException(errorResponse.message)
         }

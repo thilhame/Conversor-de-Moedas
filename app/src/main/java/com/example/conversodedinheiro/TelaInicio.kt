@@ -2,10 +2,9 @@ package com.example.conversodedinheiro
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.example.conversodedinheiro.databinding.InicialBinding
-import com.example.conversodedinheiro.ui.main.MainActivity
+import com.example.conversodedinheiro.main.MainActivity
 
 
 class TelaInicio:AppCompatActivity() {
